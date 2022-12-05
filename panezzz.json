@@ -1,0 +1,1 @@
+$(eval q=`$(query)`?`$(query)`:`$(user)`;v=`$(urlfetch json http://twitch.center/customapi/quote/list?token=FIRSTTOKEN&no_id=1)`.split(",");c=0;for(i=0;i<v.length;i++){m=v[i].match(/^(\w+)\|(\d+)$/);if(m&&m[1].toLowerCase()==q.toLowerCase()){c++}}`${q} has used !hey ${c} time${c==1?"":"s"}`)
